@@ -6,15 +6,23 @@ export default function(props) {
   const [photo, setPhoto] = useState({})
   const [photoName, setPhotoName] = useState("")
 
-  function fetchPhoto(id) {
-    axios.get(`/photo/${id}?_expand=album`).then(resp => {
-      setPhoto(resp.data.url)
-      setPhotoName(resp.data.name)
+  function getPhoto(id) {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(`/photos/${id}`)
+        .then(resp => {
+          resolve(resp.data)
+        })
+        .catch(e => {
+          reject(e)
+        })
     })
   }
 
   useEffect(() => {
-    const id = props.match.params.id
+    getPhoto(props.match.params.id).then(photo => {
+      setPhoto(photo)
+    })
   }, [props.match.params])
 
   return (
