@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import axios from "axios"
-
+import "/Users/punchcode/Projects/photo-proj/src/styles/liststyle.css"
 import PhotoName from "./PhotoName.js"
 
 export default function(props) {
@@ -23,7 +23,7 @@ export default function(props) {
   return (
     <div className="myPhotosContainer">
       <h1>{albumName}</h1>
-      <div className="multiple">
+      <div className="single">
         {photos.map(photo => (
           <Link to={"/PhotoName/" + photo.id}>
             <img src={photo.url} />
