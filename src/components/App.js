@@ -11,11 +11,7 @@ export default function App() {
       <div className="wrapper">
         <Route exact path="/" component={AlbumList} />
         <Route exact path="/albumContents/:id" component={AlbumContents} />
-        <Route
-          exact
-          path="/albumContents/photoName/:id"
-          component={PhotoName}
-        />
+        <Route exact path="/photoName/:id" component={PhotoName} />
       </div>
     </Router>
   )
