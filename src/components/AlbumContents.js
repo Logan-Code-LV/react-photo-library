@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import axios from "axios"
-import "/Users/punchcode/Projects/photo-proj/src/styles/liststyle.css"
+import "../styles/liststyle.css"
 import PhotoName from "./PhotoName.js"
 
 export default function(props) {
