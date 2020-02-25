@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import axios from "axios"
+import "../styles/photostyle.css"
 
 export default function(props) {
   const [photo, setPhoto] = useState({})
