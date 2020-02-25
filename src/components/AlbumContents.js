@@ -18,7 +18,7 @@ export default function(props) {
   useEffect(() => {
     const id = props.match.params.id
     fetchPhotos(id)
-  }, [])
+  }, [props.match.params])
 
   return (
     <div className="myPhotosContainer">
@@ -29,6 +29,26 @@ export default function(props) {
             <img src={photo.url} />
           </Link>
         ))}
+      </div>
+      <div className="navbar">
+        <Link className="link" to={"/AlbumContents/1"}>
+          Album 1
+        </Link>
+        <Link className="link" to={"/AlbumContents/2"}>
+          Album 2
+        </Link>
+        <Link className="link" to={"/AlbumContents/3"}>
+          Album 3
+        </Link>
+        <Link className="link" to={"/AlbumContents/4"}>
+          Album 4
+        </Link>
+        <Link className="link" to={"/AlbumContents/5"}>
+          Album 5
+        </Link>
+        <Link className="link" to={"/AlbumContents/6"}>
+          Album 6
+        </Link>
       </div>
     </div>
   )

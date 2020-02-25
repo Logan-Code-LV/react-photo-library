@@ -21,3 +21,16 @@ img {
   grid-gap: 50px;
   justify-items: center;
 }
+
+.navbar {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.link {
+  margin: 10px;
+  font-size: 18px;
+  background-color: rgb(210, 210, 210);
+  border: 1px solid black;
+  padding: 15px;
+}
